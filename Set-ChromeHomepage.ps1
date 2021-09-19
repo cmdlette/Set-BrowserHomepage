@@ -6,7 +6,7 @@ $chromeurl = "HKLM:\SOFTWARE\Policies\Google\Chrome\Recommended\RestoreOnStartup
 New-Item $chromerec -Force
 New-Item $chromeurl -Force
 
-# Set site to open on Chrome startup and set as homepage
+# Set specified site to open on Chrome startup and set as homepage
 # This section also enables the home button, which users seem to appreciate!
 Get-Item -Path $chromerec | Set-ItemProperty -Name "RestoreOnStartup" -Value 4
 Get-Item -Path $chromeurl | Set-ItemProperty -Name "1" -Value "https://domain.tld"
